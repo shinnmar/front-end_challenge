@@ -1,0 +1,242 @@
+.home {
+  position: relative;
+  padding: 1rem 0 8rem;
+
+  @media (max-width: $breakpoint-lg) {
+    padding: 0 0 6rem;
+  }
+
+  &__blur {
+    &--left {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      z-index: -1;
+
+      @media (max-width: $breakpoint-md) {
+        left: -19%;
+        bottom: -15%;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        left: -29%;
+      }
+    }
+
+    &--right {
+      top: -15%;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+
+      @media (max-width: $breakpoint-md) {
+        top: -63%;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 1rem 0 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 10;
+
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__wrapper__mobile {
+    @media (max-width: $breakpoint-lg) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    &--mobile {
+      display: none;
+
+      @media (max-width: $breakpoint-lg) {
+        display: flex;
+        border-radius: 19px;
+      }
+    }
+
+    &--desktop {
+      display: block;
+
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 25px;
+    }
+  }
+
+  &__text {
+    flex: 1 1 50%;
+    flex-direction: column;
+    display: flex;
+    gap: 1.5rem;
+
+    &--mobile {
+      @media (max-width: $breakpoint-lg) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__tagproduct {
+    background: $gradient;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    align-self: flex-start;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    article {
+      display: flex;
+      @media (max-width: $breakpoint-lg) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0 0rem 1rem;
+    font-size: $font-size-xs;
+    color: $light-grey;
+    font-weight: 500;
+    border: 1px solid $light-grey;
+
+    &--document,
+    &--documents {
+      border: 1px solid $light-grey;
+      border-radius: 0 8px 8px 0;
+      border-left: none;
+      color: $light-grey;
+      font-size: $font-size-xs;
+      background-color: $secondary-white;
+    }
+
+    &--documents {
+      border: 1px solid $light-grey;
+      border-radius: 8px 0 0 8px;
+      border-right: none;
+      padding: 0 1rem 0 0;
+    }
+
+    &--cellphone,
+    &--document {
+      border: 1px solid $light-grey;
+      color: $light-grey;
+      font-size: $font-size-xs;
+    }
+
+    &--document {
+      padding: 0.5rem 0.8rem;
+      width: 100%;
+    }
+
+    &--cellphone {
+      border-radius: 8px;
+      padding: 0.5rem 0 0.5rem 1rem;
+      background-color: $secondary-white;
+    }
+
+    p {
+      color: $red-rimac;
+    }
+  }
+
+  &__input:focus-visible,
+  &__select:focus-visible {
+    outline: none;
+  }
+
+  &__input,
+  &__select {
+    padding: 0.2rem 0 0;
+    margin-top: 0.25rem;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+  }
+
+  &__select,
+  &__label {
+    border-radius: 8px 0 0 8px;
+  }
+
+  &__input,
+  &__select,
+  &__label {
+    background-color: $secondary-white;
+    font-family: $font-family-primary;
+  }
+
+  &__select {
+    font-size: 1rem;
+    border-right: none;
+    height: 100%;
+    margin: 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+
+  a {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    color: $black;
+    margin: 0 0 1.1rem;
+  }
+
+  span.error-label {
+    color: $red-rimac;
+    font-size: $font-size-xs;
+    margin: 0;
+    display: block;
+  }
+
+  p {
+    font-size: $font-size-sm;
+    line-height: 1.25rem;
+
+    @media (max-width: $breakpoint-lg) {
+      padding: 2rem 0 0;
+      border-top: 1px solid $lightest-grey;
+    }
+  }
+}

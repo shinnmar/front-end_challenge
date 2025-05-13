@@ -1,0 +1,13 @@
+.planList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 0;
+  max-width: 1200px;
+  justify-content: center;
+  gap: 2rem;
+
+  @media (max-width: $breakpoint-md) {
+    margin: 2rem 0 0;
+  }
+}

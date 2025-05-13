@@ -1,0 +1,66 @@
+.steps {
+  background-color: #edeffc;
+  font-family: $font-family-secondary;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+
+  &__step {
+    color: $secondary-grey;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+
+    span {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.6;
+      border: 1px solid $secondary-grey;
+      font-size: 14px;
+
+      @media (max-width: $breakpoint-md) {
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: $font-weight-regular;
+      margin: 0;
+
+      @media (max-width: $breakpoint-md) {
+        font-size: $font-size-sm;
+      }
+    }
+
+    &--active {
+      p {
+        color: $secondary-black;
+        font-weight: $font-weight-bold;
+      }
+
+      span {
+        background-color: $blueberry;
+        color: $white;
+        border: 1px solid $blueberry;
+      }
+    }
+  }
+
+  &__dashes {
+    color: $secondary-grey; 
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+
+    &--active {
+      color: $blueberry;
+      font-weight: $font-weight-bold;
+    }
+  }
+}

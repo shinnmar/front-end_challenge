@@ -1,0 +1,21 @@
+.button {
+  align-self: flex-start;
+  color: $white;
+  padding: 1.25rem 2.5rem;
+  font-size: 1rem;
+  border-radius: 2.5rem;
+  border: none;
+  cursor: pointer;
+
+  @media (max-width: $breakpoint-lg) {
+    width: 100%;
+  }
+
+  &--black {
+    background-color: $black;
+  }
+
+  &--red {
+    background-color: $red-rimac;
+  }
+}

@@ -1,0 +1,89 @@
+.planCard {
+  display: flex;
+  width: 290px;
+  text-align: left;
+
+  .card {
+    padding: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 600px;
+    width: 100%;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 53px;
+    }
+
+    h3 {
+      font-size: $font-size-2xl;
+      font-weight: 900;
+      margin: 0.5rem 0;
+    }
+
+    ul {
+      padding: 0 0 0 1.5rem;
+
+      li {
+        font-size: 1rem;
+        line-height: 1.7rem;
+        margin: 0 0 2rem;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__planPrice {
+    text-transform: uppercase;
+    color: $secondary-grey;
+    font-size: $font-size-xs;
+    font-weight: 900;
+    text-align: left;
+    margin: 1rem 0 0.5rem;
+  }
+
+  &__price {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xl;
+    border-bottom: 1px solid $lightest-grey;
+    padding: 0 0 1.5rem;
+  }
+
+  &__tag {
+    background: $secondary-gradient;
+    border-radius: 6px;
+    padding: 0.3rem;
+    position: absolute;
+    top: -8%;
+    font-size: $font-size-xs;
+    font-weight: 900;
+  }
+}
+
+.planCard__cardCustom {
+  padding: 4.5rem 2rem 2rem 2rem;
+}
+
+.planCard__button {
+  width: 100%;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
+}
